@@ -51,7 +51,7 @@ namespace DesignPatternTemplate
             foreach(var laptop in laptop_lst)
             {
                 if(laptop.getOS().equals(this.Os, StringComparison.OrdinalIgnoreCase))
-                    meet_Lst.add(laptop);
+                    meet_Lst.Add(laptop);
             }
             return meet_Lst;
         }
@@ -69,7 +69,7 @@ namespace DesignPatternTemplate
             foreach(var laptop in laptop_lst)
             {
                 if(laptop.getScreenSize() == this.ScreenSize)
-                    meet_Lst.add(laptop);
+                    meet_Lst.Add(laptop);
             }
             return meet_Lst;
         }
@@ -87,7 +87,7 @@ namespace DesignPatternTemplate
             foreach(var laptop in laptop_lst)
             {
                 if(laptop.getCPU().equals(this.CPU, StringComparison.OrdinalIgnoreCase))
-                    meet_Lst.add(laptop);
+                    meet_Lst.Add(laptop);
             }
             return meet_Lst;
         }
@@ -125,7 +125,7 @@ namespace DesignPatternTemplate
                 foreach(var c_m in current_meet_Lst)
                 {
                     if(!meet_Lst.Contains(c_m))
-                        meet_Lst.add(c_m);
+                        meet_Lst.Add(c_m);
                 }
             }
             return meet_Lst;
@@ -136,10 +136,10 @@ namespace DesignPatternTemplate
         public void demo()
         {
             List<Laptop> Laptop_Lst = new List<Laptop>();
-            Laptop_Lst.add(new Laptop ("Intel", 17, "Windows"));
-            Laptop_Lst.add(new Laptop ("Intel", 18, "Windows"));
-            Laptop_Lst.add(new Laptop ("M4", 15, "Linux"));
-            Laptop_Lst.add(new Laptop ("ARM64", 16, "CENTOS"));
+            Laptop_Lst.Add(new Laptop ("Intel", 17, "Windows"));
+            Laptop_Lst.Add(new Laptop ("Intel", 18, "Windows"));
+            Laptop_Lst.Add(new Laptop ("M4", 15, "Linux"));
+            Laptop_Lst.Add(new Laptop ("ARM64", 16, "CENTOS"));
             Criteria Intel_Cri = new Criteria_CPU("Intel"); // 2 item : "Intel", 17, "Windows", "Intel", 18, "Windows"
             Criteria M4_Cri = new Criteria_CPU("M4");// 1 item : "M4", 15, "Linux"
             Criteria ARM64_Cri = new Criteria_CPU("ARM64");// 1 item : ARM64", 16, "CENTOS"

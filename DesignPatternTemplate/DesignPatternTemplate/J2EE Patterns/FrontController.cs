@@ -66,4 +66,19 @@ namespace DesignPatternTemplate
                 dispatcher.dispatch(request);
         }
     }
+    public class FrontControllerDemo
+    {
+        public void Demo()
+        {
+            FrontController frontController = new FrontController();
+            frontController.Request("Student");
+            //User request : Student
+            //User verify OK.
+            //Here is Student Page.
+            frontController.Request("Teacher");
+            //User request : Teacher
+            //User verify OK.
+            //Here is Teacher Page.
+        }        
+    }
 }
